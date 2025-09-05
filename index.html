@@ -4,57 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ổ nhỏ của Mèo và Thỏ</title>
-  
-<!-- Favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 
-  <!-- Font dễ thương từ Google -->
+  <!-- Font dễ thương -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+    }
+
+    /* --- Header (menu) --- */
+    header {
+      background: #ff99cc;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+    header a {
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Section --- */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
       text-align: center;
     }
-    .container {
-      background: #fffafc;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-      max-width: 700px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .banner-img {
-      width: 100%;
-      max-width: 650px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
-    }
-    h1 {
+    h1, h2 {
       font-family: 'Pacifico', cursive;
-      font-size: 2.5em;
       color: #ff6699;
-      margin-bottom: 15px;
     }
     p {
       font-size: 1.2em;
       color: #444;
       line-height: 1.6;
     }
+
+    /* --- Banner --- */
+    .banner-img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* --- Trái tim đập --- */
     .heart {
       font-size: 2em;
       color: #ff6699;
       animation: heartbeat 1.2s infinite;
       margin-top: 15px;
     }
+
+    /* --- Iframe --- */
+    iframe {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    /* --- Hiệu ứng --- */
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
@@ -66,15 +93,35 @@
   </style>
 </head>
 <body>
-  <div class="container">
-   <!-- Ảnh banner -->
+  <!-- Menu -->
+  <header>
+    <a href="#home"> ☀️ Trang chủ</a>
+    <a href="#projects">🌻 Project</a>
+    <a href="#messages">💗 Lời nhắn nhủ </a>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
     <img src="choran.png" alt="Banner Mèo và Thỏ" class="banner-img">
-    <!-- Tiêu đề & nội dung -->
     <h1>Ổ nhỏ của Mèo và Thỏ 🐱🐰</h1>
     <p>Chào mừng các bạn đã đến với ổ nhỏ của Mèo và Thỏ.<br>
     Nơi gửi gắm những yêu thương dành cho<br>
     <b>tuyển thủ Chovy và Doran</b>!</p>
     <div class="heart">💖</div>
-  </div>
+  </section>
+
+  <!-- Project -->
+  <section id="projects">
+    <h2>Floravere – Hoa của lời nguyện ❀</h2>
+    <p>Theo dõi tiến độ Project Floravere:</p>
+    <iframe src="https://docs.google.com/spreadsheets/d/1Pw2l9cRkyc_c_k4GD1VtBFQ9yhxk3JvPg0fh2YEVN50/edit?usp=sharing" height="400"></iframe>
+  </section>
+
+  <!-- Messages -->
+  <section id="messages">
+    <h2>Lời nhắn gửi đến những vì sao 💫</h2>
+    <p>Viết lời nhắn ở form bên dưới nhé, có thể đọc lời nhắn của bạn trong bảng sheet Plan luôn á ෆ:</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjQLjb0n0GlD2a_FFgr-WhinFFsdnJoHc6oagKOwx7QhlxRg/viewform?embedded=true" height="600"></iframe>
+  </section>
 </body>
 </html>
